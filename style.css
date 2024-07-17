@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-sans-serif-poppins: 'Poppins', sans-serif;
+    --bs-font-sans-serif-arial: Arial, Helvetica, sans-serif;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-font-arial: Arial, sans-serif;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --body-width: 100%;
+    --max-body-width: 1400px;
+    --n-blocks: 4;
+    --n-cards: 4;
+    --padding-1-rem: 1rem;
+    --margin-1-rem: 1rem;
+    --margin-percen-01: 1%;
+    --padding-percen-01: 1%;
+    --margin-05-rem: 0.5rem;
+    --background-color-menu: hsl(220, 24%, 12%);
+    --background-color-footer: #24262b;
+    --background-color-footer_2: #343434;
+}
+
+
+html {
+    background: #f9f9f9;
+}
+
+html, body {
+    height: 100%;
+    width
+    margin: 0;
+    width: var(--body-width);
+}
+
+
+.container-for-slider_1 {
+    display: flex;
+    flex-direction: column;
+	max-width: var(--body-width);
+	font-family: var(--bs-font-sans-serif-arial);
+	justify-content: center;
+    margin: 1em auto;
+    background: #f1f1f1;
+    padding: 1em;
+}
+
+
+.slider-buttons {
+    display: flex;
+    flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.slider-buttons button {
+    background: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: .9rem;
+}
+
+
+.slider-buttons button:hover {
+    background: orangered;
+}
+
+
+.slider-buttons button:active {
+    background: #000;
+    color: #fff;
+}
+
+
+.slider-1 {
+    border: 2px solid black;
+    max-width: 43.5%; /* регуюємо розмір зображення тільки тут */
+    min-width: 300px; /* регуюємо розмір зображення тільки тут */
+    margin: 1em auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.slider-line-1 {
+    display: flex;
+    background: white;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+
+
+
+.slider-line-1 img:nth-child(odd) {padding:  0.5% 0.6% 0.5% 0.4%;}
+
+.slider-line-1 img:nth-child(even) {padding:  0.5% 0.4% 0.5% 0.1%;}
+
+
+
+.slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.1em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-prev {
+    left: 0;
+}
+
+.slider-next {
+    right: 0;
+}
+
+.slider-control i {
+    font-size: clamp(1rem, 1.15vw, 1.2rem);
+}
